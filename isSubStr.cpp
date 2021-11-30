@@ -56,47 +56,8 @@ class SSTR {
 
             return result; 
         }
-    
-}; 
 
-
-// string isSSTRRecur(const string& s1, const string &s2, const string& pss, int i1, int i2, int iss){
-    
-//     string result; 
-//     for(; iss <pss.length(); iss++){
-//         if(!matrix[i1][i2]) return errResult; // if we were here already 
-//         else if(tolower(s1[i1]) != tolower(pss[iss]) && tolower(s2[i2]) != tolower(pss[iss])) {
-//             matrix[i1][i2] = false; 
-//             return errResult;
-//         } 
-//         else if (tolower(s1[i1]) == tolower(s2[i2])){
-//             // try s1 first
-//             string tResult = isSSTRRecur(s1,s2,pss,i1+1,i2,iss+1); 
-//             if(tResult != errResult)
-//                 return result + (char)toupper(pss[iss]) + tResult;
-//             matrix[i1+1][i2] = false; // mark that we were already here 
-            
-//             //pick s2 if s1 was bad     
-//             tResult = isSSTRRecur(s1,s2,pss,i1,i2+1,iss+1); 
-//             if(tResult != errResult)
-//                 return result + (char)tolower(pss[iss]) + tResult;
-//             matrix[i1][i2+1] = false; // mark that we were already here 
-//             return errResult; 
-//         }
-//         else if(tolower(s1[i1]) == tolower(pss[iss]))
-//             result += toupper(s1[i1++]); 
-//         else
-//             result += tolower(s2[i2++]);
-//     }
-
-//     return result; 
-// }
-
-// string isSSTR(const string& s1, const string &s2, const string& pss){
-//     if(pss.length() != s1.length() + s2.length()) return errResult; 
-//     fill((bool*)matrix,(bool*)matrix+sizeof(matrix)/sizeof(bool),true);
-//     return isSSTRRecur(s1,s2,pss,0,0,0); 
-// }
+};
 
 
 void parseAndOutputFiles(const string& inputFileName, const string& outputfileName){
